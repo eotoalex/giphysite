@@ -1,5 +1,5 @@
-var apiKey = "&api_key=FE0K9W1wRMIZlBbC9i3hekFL1bNmkHZk";
-var queryURL = "https://api.giphy.com/v1/gifs/search?q=anime"+apiKey;
+var apiKey = "&api_key=2qcWvAoAraVkB70bhiX5h3nVIWC0urFb";
+var queryURL = "https://api.giphy.com/v1/gifs/search?q="+buttonData + apiKey;
 var topics = ["anime", "horror", "drama", "romance", "action"]
  var buttonData = "anime";
 
@@ -26,7 +26,10 @@ $.ajax({
     
      var x = response.data[9].url;
      console.log(x);
-     $("image-test").attr("src",response.data[9].url )
+     $("#image-test").attr("samesite","lax" )
+     $("#image-test").attr("src",response.data[9].url )
+     $("#image-test").attr("alt","An anime image." )
+     $("#image-test").attr("animate",response.data[9].url )
     
     
     })
