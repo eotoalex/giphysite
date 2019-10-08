@@ -1,6 +1,7 @@
 var apiKey = "&api_key=FE0K9W1wRMIZlBbC9i3hekFL1bNmkHZk";
-var queryURL = "https://api.giphy.com/v1/gifs/search?q="+ button + apiKey;
+var queryURL = "https://api.giphy.com/v1/gifs/search?q=anime"+apiKey;
 var topics = ["anime", "horror", "drama", "romance", "action"]
+ var buttonData = "anime";
 
 // Generate button elements.
 function buttonGen (){
@@ -16,24 +17,29 @@ function buttonGen (){
    }
 
 };
+
 $.ajax({
     url:queryURL,
     method:"GET"
     }).then(function(response){
-    console.log(response);
+    
+    
+     var x = response.data[9].url;
+     console.log(x);
+     $("image-test").attr("src",response.data[9].url )
+    
+    
     })
 
     // var button = $(buttonGen).attr("data");
-    var x = response;
-    $("#text-input").append(x);
-
+    
 
 
 // Create click event for the buttons.
 
-$(".topic-buttons").on("click", function(){
-    var userclick = $(this).val()
-    var elementData = $(this).attr("data");
+// $(".topic-buttons").on("click", function(){
+//     var userclick = $(this).val()
+//     var elementData = $(this).attr("data");
     // $.ajax({
     //     url:queryURL,
     //     method:"GET"
@@ -48,11 +54,11 @@ $(".topic-buttons").on("click", function(){
         // $("#text-input").append(generateGifs);
 
 
-  
+       
 
 
 
-})
+// })
 
 
 
