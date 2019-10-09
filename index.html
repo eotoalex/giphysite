@@ -7,13 +7,16 @@
     <title>Giphy Site</title>
 
     <!-- Link to CSS -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
 
-    <!-- API Key for Giphy -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   <!-- API Key -->
     <!-- FE0K9W1wRMIZlBbC9i3hekFL1bNmkHZk -->
 
     <!-- API URL -->
@@ -117,10 +120,21 @@ If you have any questions about this project or the material we have covered, pl
 <body>
 <h1>TV/Movie Gifs</h1>
 <input id="text-input"></input>
+<button id="search-button">Search</button>
 
 <p id="test"></p>
 
 <img id="image-test" >
+
+<div class="card bg-light mb-5" style="max-width: 25rem;">
+    <div class="card-header"></div>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="display-gifs"></p>
+      <h3 class="display-rating"></h3>
+
+    </div>
+  </div>
 
     <!-- Link to Javascript -->
     <script src="assets/javascript/giphy.js"></script>
